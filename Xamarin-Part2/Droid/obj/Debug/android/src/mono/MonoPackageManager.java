@@ -101,7 +101,6 @@ class MonoPackageManager_Resources {
 		"XamarinPart2.Droid.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
-		"RestSharp.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Platform.Android.dll",
