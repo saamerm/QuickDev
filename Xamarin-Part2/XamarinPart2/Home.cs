@@ -57,23 +57,38 @@ namespace XamarinPart2
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Button))
 			};
-			weatherButton.Clicked+= async (sender, e) => {
-				HttpClient client = new HttpClient();
-				Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
-				string obstring = await client.GetStringAsync (uri);
-				RootObject weatherlist = JsonConvert.DeserializeObject<RootObject> (obstring);
-                //weatherText.Text = "Here's the city" + weatherlist.name;
-                //Complicating a little more
-                var weather1 = new Weather();
-                weatherlist.weather.Add(weather1);
-                weatherText.Text = "Looks like there is a " + weatherlist.weather[0].description+" in "+weatherlist.name  ;
-                DependencyService.Get<ITextToSpeech> ().Speak (weatherText.Text);
+
+            var x = AsyncFunction();
+            var y = x.Result;
+            var weather2 = new Weather();
+            y.weather.Add(weather2);
+            weatherText.Text = "Looks like there is a " + y.weather[0].description + " in " + y.name;
+            //DependencyService.Get<ITextToSpeech>().Speak(weatherText.Text);
+
+            //        weatherButton.Clicked+= async (sender, e) => 
+        //  {
+				//HttpClient client = new HttpClient();
+				//Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
+				//string obstring = await client.GetStringAsync (uri);
+				//RootObject weatherlist = JsonConvert.DeserializeObject<RootObject> (obstring);
+                
+    //            //weatherText.Text = "Here's the city" + weatherlist.name;
+    //            //Commented above because complicating a little more
+
+    //            //var weather1 = new Weather();
+    //            //weatherlist.weather.Add(weather1);
+    //            //weatherText.Text = "Looks like there is a " + weatherlist.weather[0].description+" in "+weatherlist.name  ;
+    //            //DependencyService.Get<ITextToSpeech> ().Speak (weatherText.Text);
 
 
-                var x = AsyncFunction();
-                var y = x.Result;
-                y.weather.Add(weather1);
-			};
+    //            var x = AsyncFunction();
+    //            var y = x.Result;
+    //            var weather2= new Weather();
+    //            y.weather.Add(weather2);
+    //            weatherText.Text = "Looks like there is a " + y.weather[0].description + " in " + y.name;
+    //            DependencyService.Get<ITextToSpeech>().Speak(weatherText.Text);
+
+    //        };
             #region Commented customJokeButton
             //Button customJokeButton = new Button {
             //	Text = "Get Custom Joke",
