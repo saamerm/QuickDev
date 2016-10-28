@@ -1,3 +1,12 @@
+**API CALLLLSSSS!!!**
+==================
+##**Intro**
+This repository is used by me to practice and make cross platform Xamarin apps.
+I only edit and change the "Part 2" folder solutions.
+The master branch gives you weather of Chicago.
+Eventually I want to be able to get data from my Particle photon device and display it for users.
+
+
 **Quick Dev**
 ======
 **Quick Dev** is a series dedicated to saving you, the developer, time in your day.  Developer time is limited and expensive, so the goal here is to show tools, strategies, etc. that can save you time focused on Mobile Apps, the Cloud, etc.
