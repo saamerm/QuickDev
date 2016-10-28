@@ -7,7 +7,8 @@ public class ButtonRenderer
 		mono.android.IGCUserPeer,
 		android.view.View.OnAttachStateChangeListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_childDrawableStateChanged:(Landroid/view/View;)V:GetChildDrawableStateChanged_Landroid_view_View_Handler\n" +
@@ -65,7 +66,7 @@ public class ButtonRenderer
 
 	private native void n_onViewDetachedFromWindow (android.view.View p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

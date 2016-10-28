@@ -6,7 +6,8 @@ public class NavigationMenuRenderer_MenuAdapter
 	implements
 		mono.android.IGCUserPeer
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_getView:(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;:GetGetView_ILandroid_view_View_Landroid_view_ViewGroup_Handler\n" +
@@ -14,7 +15,7 @@ public class NavigationMenuRenderer_MenuAdapter
 			"n_getCount:()I:GetGetCountHandler\n" +
 			"n_getItem:(I)Ljava/lang/Object;:GetGetItem_IHandler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.NavigationMenuRenderer/MenuAdapter, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", NavigationMenuRenderer_MenuAdapter.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.NavigationMenuRenderer+MenuAdapter, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", NavigationMenuRenderer_MenuAdapter.class, __md_methods);
 	}
 
 
@@ -22,7 +23,7 @@ public class NavigationMenuRenderer_MenuAdapter
 	{
 		super ();
 		if (getClass () == NavigationMenuRenderer_MenuAdapter.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.NavigationMenuRenderer/MenuAdapter, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.NavigationMenuRenderer+MenuAdapter, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 
@@ -57,7 +58,7 @@ public class NavigationMenuRenderer_MenuAdapter
 
 	private native java.lang.Object n_getItem (int p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

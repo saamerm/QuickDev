@@ -6,7 +6,8 @@ public class FrameRenderer_FrameDrawable
 	implements
 		mono.android.IGCUserPeer
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_isStateful:()Z:GetIsStatefulHandler\n" +
@@ -16,7 +17,7 @@ public class FrameRenderer_FrameDrawable
 			"n_getOpacity:()I:GetGetOpacityHandler\n" +
 			"n_setColorFilter:(Landroid/graphics/ColorFilter;)V:GetSetColorFilter_Landroid_graphics_ColorFilter_Handler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.FrameRenderer/FrameDrawable, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", FrameRenderer_FrameDrawable.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.FrameRenderer+FrameDrawable, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", FrameRenderer_FrameDrawable.class, __md_methods);
 	}
 
 
@@ -24,7 +25,7 @@ public class FrameRenderer_FrameDrawable
 	{
 		super ();
 		if (getClass () == FrameRenderer_FrameDrawable.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.FrameRenderer/FrameDrawable, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.FrameRenderer+FrameDrawable, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 
@@ -75,7 +76,7 @@ public class FrameRenderer_FrameDrawable
 
 	private native void n_setColorFilter (android.graphics.ColorFilter p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

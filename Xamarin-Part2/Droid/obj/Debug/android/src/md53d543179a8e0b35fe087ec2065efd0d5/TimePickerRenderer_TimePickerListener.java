@@ -7,12 +7,13 @@ public class TimePickerRenderer_TimePickerListener
 		mono.android.IGCUserPeer,
 		android.view.View.OnClickListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View/IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.TimePickerRenderer/TimePickerListener, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", TimePickerRenderer_TimePickerListener.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.TimePickerRenderer+TimePickerListener, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", TimePickerRenderer_TimePickerListener.class, __md_methods);
 	}
 
 
@@ -20,7 +21,7 @@ public class TimePickerRenderer_TimePickerListener
 	{
 		super ();
 		if (getClass () == TimePickerRenderer_TimePickerListener.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TimePickerRenderer/TimePickerListener, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TimePickerRenderer+TimePickerListener, Xamarin.Forms.Platform.Android, Version=1.3.5.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 
@@ -31,7 +32,7 @@ public class TimePickerRenderer_TimePickerListener
 
 	private native void n_onClick (android.view.View p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

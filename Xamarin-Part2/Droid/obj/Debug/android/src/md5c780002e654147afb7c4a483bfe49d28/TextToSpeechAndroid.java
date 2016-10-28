@@ -7,7 +7,8 @@ public class TextToSpeechAndroid
 		mono.android.IGCUserPeer,
 		android.speech.tts.TextToSpeech.OnInitListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onInit:(I)V:GetOnInit_IHandler:Android.Speech.Tts.TextToSpeech/IOnInitListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
@@ -31,7 +32,7 @@ public class TextToSpeechAndroid
 
 	private native void n_onInit (int p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)
