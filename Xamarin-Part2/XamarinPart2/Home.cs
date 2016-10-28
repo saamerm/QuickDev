@@ -66,7 +66,7 @@ namespace XamarinPart2
                 var weather1 = new Weather();
                 weatherlist.weather.Add(weather1);
                 weatherText.Text = "Looks like there is a " + weatherlist.weather[0].description+" in "+weatherlist.name  ;
-                DependencyService.Get<ITextToSpeech> ().Speak (weatherlist.name);
+                DependencyService.Get<ITextToSpeech> ().Speak (weatherText.Text);
 			};
             #region Commented customJokeButton
             //Button customJokeButton = new Button {
