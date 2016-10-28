@@ -12,6 +12,11 @@ Please reach out to me on twitter @saamerm if you have any questions whatsoever!
 
 
 The stuff below this is from the guy who I forked this from.
+
+
+Future upgrades-
+Using this to only take the latest data from the Thingspeak
+http://community.thingspeak.com/forum/thingspeak-api/retrieve-any-stored-data/
 ======================
 +++++++++++++++++++++
 
