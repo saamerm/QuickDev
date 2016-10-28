@@ -41,7 +41,9 @@ namespace XamarinPart2
 				Uri uri = new Uri("https://thingspeak.com/channels/176089/field/1.json");
 				string obstring = await client.GetStringAsync (uri);
 				RootObject photonRead = JsonConvert.DeserializeObject<RootObject> (obstring);
-				jokeText.Text = photonRead.channel.last_entry_id.ToString();
+                var readingList = new Feed();
+                photonRead.feeds.Add(readingList);
+				jokeText.Text = photonRead.channel.last_entry_id.ToString()+photonRead.feeds[photonRead.channel.last_entry_id-1].field1;
 				DependencyService.Get<ITextToSpeech> ().Speak (jokeText.Text);
 			};
             
