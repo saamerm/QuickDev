@@ -61,11 +61,11 @@ namespace XamarinPart2
 				Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
 				string obstring = await client.GetStringAsync (uri);
 				RootObject weatherlist = JsonConvert.DeserializeObject<RootObject> (obstring);
+                //weatherText.Text = "Here's the city" + weatherlist.name;
+                //Complicating a little more
                 var weather1 = new Weather();
-                //weather.description
                 weatherlist.weather.Add(weather1);
-                //weatherText.Text = "Looks like there is a "+weathers.name+" at latitude "+weathers.coord.lat+ weather.description;
-                weatherText.Text = "Looks like there is a " + weatherlist.name + " and it feels like "+weatherlist.weather[0].description ;
+                weatherText.Text = "Looks like there is a " + weatherlist.weather[0].description+" in "+weatherlist.name  ;
                 DependencyService.Get<ITextToSpeech> ().Speak (weatherlist.name);
 			};
             #region Commented customJokeButton
