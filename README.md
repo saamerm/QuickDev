@@ -1,11 +1,19 @@
 **API CALLLLSSSS!!!**
 ==================
 ##**Intro**
-This repository is used by me to practice and make cross platform Xamarin apps.
-I only edit and change the "Part 2" folder solutions.
-The master branch gives you weather of Chicago.
-Eventually I want to be able to get data from my Particle photon device and display it for users.
+This repository is used by me (Saamer Mansoor) to practice and make cross platform Xamarin apps.
+I ONLY edit and change the "Part 2" folder solutions, so don't bother with the other folders.
+The master branch only gives you weather of Chicago.
+Eventually I want to be able to get data from my Particle photon (Spark core) device and display it for users.
+If you download and check the Particle photon branch, you will be able to see that I get data from the device in real time.
 
+You just need to setup Thingspeak as shown in the Particle photon website documentation and get that into the app.
+Please reach out to me on twitter @saamerm if you have any questions whatsoever!
+
+
+The stuff below this is from the guy who I forked this from.
+======================
++++++++++++++++++++++
 
 **Quick Dev**
 ======
