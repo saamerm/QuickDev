@@ -10,37 +10,19 @@ namespace XamarinPart2
 		public Home ()
 		{
 			Label title = new Label {
-				Text = "Part 2",
+				Text = "Particle photon working",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				FontSize = Device.GetNamedSize (NamedSize.Large, typeof (Label))
 			};
 
 			Label subtitle = new Label {
-				Text = "Click below to get a hilarious joke",
+				Text = "Click below to get what the response field is",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Label))
 			};
-			//Label entryText = new Label {
-			//	Text = "Enter your name to get a custom Joke",
-			//	HorizontalOptions = LayoutOptions.Center,
-			//	VerticalOptions = LayoutOptions.StartAndExpand,
-			//	FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Label))
-			//};
-
-			//Entry firstNameEntry = new Entry {
-			//	Text = "First Name",
-			//	HorizontalOptions = LayoutOptions.CenterAndExpand,
-			//	VerticalOptions = LayoutOptions.StartAndExpand,
-
-			//};
-
-			//Entry lastNameEntry = new Entry {
-			//	Text = "Last Name",
-			//	HorizontalOptions = LayoutOptions.CenterAndExpand,
-			//	VerticalOptions = LayoutOptions.StartAndExpand,
-			//};
+			
 			Label jokeText = new Label {
 				Text = "",
 				HorizontalOptions = LayoutOptions.Center,
@@ -49,41 +31,23 @@ namespace XamarinPart2
 			};
 
 			Button jokeButton = new Button {
-				Text = "Get Joke",
+				Text = "Get Value",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Button))
 			};
 			jokeButton.Clicked+= async (sender, e) => {
 				HttpClient client = new HttpClient();
-				Uri uri = new Uri("http://api.icndb.com/jokes/random?limitTo=[nerdy]");
+				Uri uri = new Uri("https://thingspeak.com/channels/176089/field/1.json");
 				string obstring = await client.GetStringAsync (uri);
-				Joke joke = JsonConvert.DeserializeObject<Joke> (obstring);
-				jokeText.Text = joke.value.joke;
-				DependencyService.Get<ITextToSpeech> ().Speak (joke.value.joke);
+				RootObject photonRead = JsonConvert.DeserializeObject<RootObject> (obstring);
+				jokeText.Text = photonRead.channel.last_entry_id.ToString();
+				DependencyService.Get<ITextToSpeech> ().Speak (jokeText.Text);
 			};
-
-			//Button customJokeButton = new Button {
-			//	Text = "Get Custom Joke",
-			//	HorizontalOptions = LayoutOptions.Center,
-			//	VerticalOptions = LayoutOptions.StartAndExpand,
-			//	FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Button))
-			//};
-			//customJokeButton.Clicked+= async (sender, e) => {
-			//	HttpClient client = new HttpClient();
-			//	Uri uri = new Uri("http://api.icndb.com/jokes/random?limitTo=[nerdy]&firstName="
-			//		+ firstNameEntry.Text+"&lastName="+ lastNameEntry.Text);
-			//	string obstring = await client.GetStringAsync (uri);
-			//	Joke joke = JsonConvert.DeserializeObject<Joke> (obstring);
-			//	jokeText.Text = joke.value.joke;
-			//	DependencyService.Get<ITextToSpeech> ().Speak (joke.value.joke);
-			//};
-
+            
 
 
 			StackLayout stack = new StackLayout {
-                //Children = {title, subtitle, entryText, firstNameEntry,
-                //    lastNameEntry, jokeButton, customJokeButton, jokeText},
                 Children = {title, subtitle, jokeButton, jokeText},
                 Padding = 20
 			};

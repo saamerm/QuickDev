@@ -70,5 +70,7 @@ C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\as
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\XamarinPart2.Droid.dll.mdb
+C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\XamarinPart2.Droid.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\XamarinPart2.Droid.dll.mdb
