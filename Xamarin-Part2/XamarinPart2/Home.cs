@@ -43,26 +43,30 @@ namespace XamarinPart2
             //	VerticalOptions = LayoutOptions.StartAndExpand,
             //};
             #endregion
-            Label jokeText = new Label {
+            Label weatherText = new Label {
 				Text = "",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Label))
 			};
 
-			Button jokeButton = new Button {
+			Button weatherButton = new Button {
 				Text = "Get Weather",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Button))
 			};
-			jokeButton.Clicked+= async (sender, e) => {
+			weatherButton.Clicked+= async (sender, e) => {
 				HttpClient client = new HttpClient();
 				Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
 				string obstring = await client.GetStringAsync (uri);
-				RootObject weather = JsonConvert.DeserializeObject<RootObject> (obstring);
-				jokeText.Text = weather.name;
-				DependencyService.Get<ITextToSpeech> ().Speak (weather.name);
+				RootObject weatherlist = JsonConvert.DeserializeObject<RootObject> (obstring);
+                var weather1 = new Weather();
+                //weather.description
+                weatherlist.weather.Add(weather1);
+                //weatherText.Text = "Looks like there is a "+weathers.name+" at latitude "+weathers.coord.lat+ weather.description;
+                weatherText.Text = "Looks like there is a " + weatherlist.name + " and it feels like "+weatherlist.weather[0].description ;
+                DependencyService.Get<ITextToSpeech> ().Speak (weatherlist.name);
 			};
             #region Commented customJokeButton
             //Button customJokeButton = new Button {
@@ -85,7 +89,7 @@ namespace XamarinPart2
 
             StackLayout stack = new StackLayout {
                 //Children = {title, subtitle, entryText, firstNameEntry, lastNameEntry, jokeButton, customJokeButton, jokeText},
-                Children = {title, subtitle, jokeButton, jokeText},
+                Children = {title, subtitle, weatherButton, weatherText},
                 Padding = 20
 			};
 			this.Padding = new Thickness(0,Device.OnPlatform (20,0,0),0,0);
