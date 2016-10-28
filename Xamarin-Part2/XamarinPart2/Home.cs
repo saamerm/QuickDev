@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace XamarinPart2
 {
@@ -67,6 +68,11 @@ namespace XamarinPart2
                 weatherlist.weather.Add(weather1);
                 weatherText.Text = "Looks like there is a " + weatherlist.weather[0].description+" in "+weatherlist.name  ;
                 DependencyService.Get<ITextToSpeech> ().Speak (weatherText.Text);
+
+
+                var x = AsyncFunction();
+                var y = x.Result;
+                y.weather.Add(weather1);
 			};
             #region Commented customJokeButton
             //Button customJokeButton = new Button {
@@ -85,8 +91,8 @@ namespace XamarinPart2
             //	DependencyService.Get<ITextToSpeech> ().Speak (joke.value.joke);
             //};
             #endregion
-
-
+            
+            
             StackLayout stack = new StackLayout {
                 //Children = {title, subtitle, entryText, firstNameEntry, lastNameEntry, jokeButton, customJokeButton, jokeText},
                 Children = {title, subtitle, weatherButton, weatherText},
@@ -95,7 +101,15 @@ namespace XamarinPart2
 			this.Padding = new Thickness(0,Device.OnPlatform (20,0,0),0,0);
 			this.Content = stack;
 		}
-	}
+        public async Task<RootObject> AsyncFunction()
+        {
+            HttpClient client = new HttpClient();
+            Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
+            string obstring = await client.GetStringAsync(uri);
+            RootObject weatherlist = JsonConvert.DeserializeObject<RootObject>(obstring);
+            return weatherlist;
+        }
+    }
 }
 
 
