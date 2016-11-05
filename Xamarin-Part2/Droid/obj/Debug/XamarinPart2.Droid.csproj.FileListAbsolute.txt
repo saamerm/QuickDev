@@ -38,7 +38,7 @@ C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\Xamarin.In
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\XamarinPart2.Droid.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\Page1.xaml.g.cs
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\XamarinPart2.Droid.dll
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\XamarinPart2.Droid.pdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\bin\com.companyname.xamarinpart2.apk
@@ -70,5 +70,6 @@ C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\as
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\android\assets\XamarinPart2.Droid.dll.mdb
+C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\XamarinPart2.Droid.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\obj\Debug\XamarinPart2.Droid.dll.mdb
 C:\Users\User\Documents\GitHub\QuickDev\Xamarin-Part2\Droid\bin\Debug\XamarinPart2.Droid.dll.mdb
