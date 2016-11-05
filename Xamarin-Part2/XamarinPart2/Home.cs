@@ -29,38 +29,42 @@ namespace XamarinPart2
                     Children = {
                     new BoxView { Color = Color.Blue },
                     new BoxView { Color = Color.Red}
-                }
+                },
                 }
             });
-            //         #region UI
-            //         Label title = new Label {
-            //	Text = "Particle photon working",
-            //	HorizontalOptions = LayoutOptions.Center,
-            //	VerticalOptions = LayoutOptions.StartAndExpand,
-            //	FontSize = Device.GetNamedSize (NamedSize.Large, typeof (Label))
-            //};
+            #region UI
+            Label title = new Label
+            {
+                Text = "Particle photon working",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label))
+            };
 
-            //Label subtitle = new Label {
-            //	Text = "Click below to get what the response field is",
-            //	HorizontalOptions = LayoutOptions.Center,
-            //	VerticalOptions = LayoutOptions.StartAndExpand,
-            //	FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Label))
-            //};
+            Label subtitle = new Label
+            {
+                Text = "Click below to get what the response field is",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+            };
 
-            //Label feedText = new Label {
-            //	Text = "",
-            //	HorizontalOptions = LayoutOptions.Center,
-            //	VerticalOptions = LayoutOptions.StartAndExpand,
-            //	FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Label))
-            //};
+            Label feedText = new Label
+            {
+                Text = "",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+            };
 
-            //Button feedButton = new Button {
-            //	Text = "Get Value",
-            //	HorizontalOptions = LayoutOptions.Center,
-            //	VerticalOptions = LayoutOptions.StartAndExpand,
-            //	FontSize = Device.GetNamedSize (NamedSize.Medium, typeof (Button))
-            //};
-            //         #endregion
+            Button feedButton = new Button
+            {
+                Text = "Get Value",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Button))
+            };
+            #endregion
             //         #region Data call
             //         feedButton.Clicked+= async (sender, e) => {
             //	HttpClient client = new HttpClient();
@@ -92,7 +96,7 @@ namespace XamarinPart2
             //this.Padding = new Thickness(0,Device.OnPlatform (20,0,0),0,0);
             //this.Content = stack;
         }
-	}
+    }
 }
 
 
