@@ -1,10 +1,10 @@
 ﻿using System;
 using AVFoundation;
-using XamarinPart2.iOS;
+using FirstHackDallas.iOS;
 
 [assembly: Xamarin.Forms.Dependency (typeof (TextToSpeechIOS))]
 
-namespace XamarinPart2.iOS
+namespace FirstHackDallas.iOS
 {
 	public class TextToSpeechIOS : ITextToSpeech
 	{

@@ -1,11 +1,11 @@
 ﻿using Android.Speech.Tts;
 using Xamarin.Forms;
 using System.Collections.Generic;
-using XamarinPart2.Droid;
+using FirstHackDallas.Droid;
 
 [assembly: Xamarin.Forms.Dependency (typeof (TextToSpeechAndroid))]
 
-namespace XamarinPart2.Droid
+namespace FirstHackDallas.Droid
 {
 	public class TextToSpeechAndroid : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
 	{

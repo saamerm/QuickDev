@@ -4,7 +4,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace XamarinPart2.iOS
+namespace FirstHackDallas.iOS
 {
 	public class Application
 	{

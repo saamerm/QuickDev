@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace XamarinPart2
+namespace FirstHackDallas
 {
 	public class App : Application
 	{

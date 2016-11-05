@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace XamarinPart2
+namespace FirstHackDallas
 {
-	public class Joke
+	public class Model
 	{
 		public string type { get; set; }
 		public Value value { get; set; }

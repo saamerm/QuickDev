@@ -3,7 +3,7 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Net.Http;
 
-namespace XamarinPart2
+namespace FirstHackDallas
 {
 	public class Home : ContentPage
 	{
@@ -58,7 +58,7 @@ namespace XamarinPart2
 				HttpClient client = new HttpClient();
 				Uri uri = new Uri("http://api.icndb.com/jokes/random?limitTo=[nerdy]");
 				string obstring = await client.GetStringAsync (uri);
-				Joke joke = JsonConvert.DeserializeObject<Joke> (obstring);
+				Model joke = JsonConvert.DeserializeObject<Model> (obstring);
 				jokeText.Text = joke.value.joke;
 				DependencyService.Get<ITextToSpeech> ().Speak (joke.value.joke);
 			};

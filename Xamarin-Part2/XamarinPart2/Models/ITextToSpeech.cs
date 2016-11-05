@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XamarinPart2
+namespace FirstHackDallas
 {
 	public interface ITextToSpeech
 	{
