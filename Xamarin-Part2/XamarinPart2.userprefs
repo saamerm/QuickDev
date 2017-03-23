@@ -1,1 +1,15 @@
-﻿<Properties StartupItem="Droid/XamarinPart2.Droid.csproj" />
+﻿<Properties StartupConfiguration="{75085FF4-B1E6-4616-BA79-2B8ADE44CE99}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinPart2/Home.cs">
+    <Files>
+      <File FileName="XamarinPart2/XamarinPart2.cs" Line="1" Column="1" />
+      <File FileName="XamarinPart2/Home.cs" Line="70" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XamarinPart2.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.XamarinPart2.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.0FA901F6-5062-4419-90BB-72D153F85AFE" />
+</Properties>

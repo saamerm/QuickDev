@@ -59,8 +59,12 @@ namespace XamarinPart2
 			};
 			weatherButton.Clicked+= async (sender, e) => {
 				HttpClient client = new HttpClient();
-				Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
+				//Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
+				client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "1714e4b600734175a106030a2ea3ff4f");
+				var uri = "https://dsapi-stage.directscale.com/v1/customers/availabilitycheck/booboo";
+				//Uri uri = new Uri("https://dsapi-stage.directscale.com/v1/customers/availabilitycheck/booboo");
 				string obstring = await client.GetStringAsync (uri);
+				int a = 5;
 				RootObject weatherlist = JsonConvert.DeserializeObject<RootObject> (obstring);
                 //weatherText.Text = "Here's the city" + weatherlist.name;
                 //Complicating a little more
@@ -70,9 +74,9 @@ namespace XamarinPart2
                 DependencyService.Get<ITextToSpeech> ().Speak (weatherText.Text);
 
 
-                var x = AsyncFunction();
-                var y = x.Result;
-                y.weather.Add(weather1);
+                //var x = AsyncFunction();
+                //var y = x.Result;
+                //y.weather.Add(weather1);
 			};
             #region Commented customJokeButton
             //Button customJokeButton = new Button {
@@ -104,7 +108,9 @@ namespace XamarinPart2
         public async Task<RootObject> AsyncFunction()
         {
             HttpClient client = new HttpClient();
-            Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
+			client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "1714e4b600734175a106030a2ea3ff4f");
+			var uri = "https://dsapi-stage.directscale.com/v1/customers/availabilitycheck/booboo";
+			//Uri uri = new Uri("http://api.openweathermap.org/data/2.5/weather?q=chicago,usa&APPID=4573c189d467ca1814c1c10000060792");
             string obstring = await client.GetStringAsync(uri);
             RootObject weatherlist = JsonConvert.DeserializeObject<RootObject>(obstring);
             return weatherlist;

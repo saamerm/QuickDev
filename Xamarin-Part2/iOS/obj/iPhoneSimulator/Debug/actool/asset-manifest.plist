@@ -6,7 +6,7 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/jamesquick/Documents/Github/QuickDev/XamarinPart2/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
+			<string>/Users/saamerm/GitHub/QuickDev/Xamarin-Part2/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
 	<key>com.apple.actool.document.warnings</key>
@@ -14,10 +14,10 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
+				<string>./AppIcons.appiconset/[][car][][][][1x][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/jamesquick/Documents/Github/QuickDev/XamarinPart2/iOS/Resources/Images.xcassets</string>
+			<string>/Users/saamerm/GitHub/QuickDev/Xamarin-Part2/iOS/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>
